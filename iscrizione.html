@@ -1,0 +1,51 @@
+<html>
+        <style>
+            p {
+                font-family: Arial, sans-serif;
+                font-size: 32px;
+            }
+			</style>
+ <body>
+
+ <fieldset style="width: 350px;">
+  <legend>Iscrizione al nostro sito(bisogna aver piu' di 18 anni)</legend>
+  <label >Nome*: </label><br />
+  <input id="nome" type="text" value="" > <br /><br />
+  <label >Cognome*: </label><br />
+  <input id="cognome" type="text" value=""><br /><br />
+  <label >Eta*: </label><br />
+  <input id="età" type="text" value="" ><br /><br />
+  <label >Sesso: </label>
+  <input type="radio"  name="sesso" value="m"  /> M
+  <input type="radio"  name="sesso" value="f"  /> F<br /><br />
+  <button onclick=iscrizione()>Iscrizione</button>
+ 
+  
+  <p id="testo" >Iscriviti</p>
+  </fieldset>
+   <script>
+    var testo = document.getElementById("testo")
+    var nome = document.getElementById("nome")
+    var cognome = document.getElementById("cognome")
+    var età = document.getElementById("età")
+    var sesso = document.getElementsByName("sesso")
+  function iscrizione(){
+    if ( nome.value=="" || cognome.value=="" || età.value=="" ){
+      testo.innerHTML="Non hai inserito tutti i dati necessari"
+      testo.style.backgroundColor ="yellow"
+    }
+    else if (parseInt(età.value)<18){
+      testo.innerHTML="Non hai l'età necessaria"
+      testo.style.backgroundColor ="red"
+    }
+    else if (sesso[0].checked){
+      testo.innerHTML="Benvenuto "+" "+nome.value+" "+cognome.value
+      testo.style.backgroundColor ="green"
+    }
+    else if (sesso[1].checked){
+      testo.innerHTML="Benvenuta "+" "+nome.value+" "+cognome.value
+      testo.style.backgroundColor ="green"
+    }
+  }
+  </script>
+ </body>
