@@ -34,7 +34,7 @@
       testo.innerHTML="Non hai inserito tutti i dati necessari"
       testo.style.backgroundColor ="yellow"
     }
-    else if (parseInt(età.value)<18){
+    else if (parseInt(età.value)<18 || isNan(parseInt(età.value))){
       testo.innerHTML="Non hai l'età necessaria"
       testo.style.backgroundColor ="red"
     }
@@ -45,6 +45,9 @@
     else if (sesso[1].checked){
       testo.innerHTML="Benvenuta "+" "+nome.value+" "+cognome.value
       testo.style.backgroundColor ="green"
+    }
+    else{
+        
     }
   }
   </script>
