@@ -1,56 +1,60 @@
 <html>
-        <style>
-            p {
-                font-family: Arial, sans-serif;
-                font-size: 32px;
-            }
-			</style>
- <body>
-
- <fieldset style="width: 350px;">
-  <legend>Complimentz, you can buy the new Jordan 1 Union 2025</legend>
-  <label >Nome*: </label><br />
-  <input id="nome" type="text" value="" > <br /><br />
-  <label >Cognome*: </label><br />
-  <input id="cognome" type="text" value=""><br /><br />
-  <label >Eta*: </label><br />
-  <input id="età" type="text" value="" ><br /><br />
-  <label >Sesso: </label>
-  <input type="radio"  name="sesso" value="m"  /> M
-  <input type="radio"  name="sesso" value="f"  /> F<br /><br />
-  <button onclick=iscrizione()>Iscrizione</button>
- 
-  <p id="testo" >iscriviti per ottenere GRATIS le scarpe Jordan 1 Union 2025</p>
-  <img id= "immagine" type="image" src=images/Unknown.jpeg alt="Jordan 1 Union 2025" >
-
-  </fieldset>
-  <img id= "immagine" type="image" src=images/Unknown-4.jpeg alt="Jordan 1 Union 2025" >
-   <script>
-    
-    var testo = document.getElementById("testo")
-    var nome = document.getElementById("nome")
-    var cognome = document.getElementById("cognome")
-    var età = document.getElementById("età")
-    var sesso = document.getElementsByName("sesso")
-    var immagine = document.getElementById("immagine")
-  function iscrizione(){
-    if ( nome.value=="" || cognome.value=="" || età.value=="" || isNaN(età.value)){
-      testo.innerHTML="Non hai inserito tutti i dati necessari"
-      testo.style.backgroundColor = "yellow"
+  <style>
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 32px;
     }
-    else if (parseInt(età.value)<18){
-      testo.innerHTML="Non hai l'età necessaria"
-      testo.style.backgroundColor ="red"
+    .emoji {
+      width: 500px;
+      height: 500px;
+      float: right;
+      margin-left: 100px;
     }
-    else if (sesso[0].checked){
-      testo.innerHTML="Complimenti per aver donato 1000 miliardi di eur a nominativo: Ghiselli Alessandro, le scarpe ADIZERO EVO SL verranno spedite a breve"
-      testo.style.backgroundColor ="green"
-      immagine.src="images/Unknown-3.jpeg"
+    fieldset {
+      display: inline-block;
+      vertical-align: top;
     }
-    else if (sesso[1].checked){
-      testo.innerHTML="Peccato hai perso"
-      testo.style.backgroundColor ="red"
-    }
-  }
-  </script>
- </body>
+  </style>
+  <body>
+    <fieldset style="width: 350px;">
+      <legend>Complimentz, you can buy the new Jordan 1 Union 2025</legend>
+      <label>Nome*: </label><br />
+      <input id="nome" type="text" value=""> <br /><br />
+      <label>Cognome*: </label><br />
+      <input id="cognome" type="text" value=""><br /><br />
+      <label>Eta*: </label><br />
+      <input id="età" type="text" value=""><br /><br />
+      <label>Sesso: </label>
+      <input type="radio" name="sesso" value="m" /> M
+      <input type="radio" name="sesso" value="f" /> F<br /><br />
+      <button onclick="iscrizione()">Iscrizione</button>
+      <p id="testo">iscriviti per ottenere GRATIS le scarpe Jordan 1 Union 2025</p>
+      <img id="immagine" type="image" src="images/Unknown.jpeg" alt="Jordan 1 Union 2025">
+    </fieldset>
+    <img id="emoji" class="emoji" src="images/Unknown-4.jpeg" alt="Jordan 1 Union 2025">
+    <script>
+      var testo = document.getElementById("testo")
+      var nome = document.getElementById("nome")
+      var cognome = document.getElementById("cognome")
+      var età = document.getElementById("età")
+      var sesso = document.getElementsByName("sesso")
+      var immagine = document.getElementById("immagine")
+      function iscrizione() {
+        if (nome.value == "" || cognome.value == "" || età.value == "" || isNaN(età.value)) {
+          testo.innerHTML = "Non hai inserito tutti i dati necessari"
+          testo.style.backgroundColor = "yellow"
+        } else if (parseInt(età.value) < 18) {
+          testo.innerHTML = "Non hai l'età necessaria"
+          testo.style.backgroundColor = "red"
+        } else if (sesso[0].checked) {
+          testo.innerHTML = "Complimenti per aver donato 1000 miliardi di eur a nominativo: Ghiselli Alessandro, le scarpe ADIZERO EVO SL verranno spedite a breve"
+          testo.style.backgroundColor = "green"
+          immagine.src = "images/Unknown-3.jpeg"
+        } else if (sesso[1].checked) {
+          testo.innerHTML = "Peccato hai perso"
+          testo.style.backgroundColor = "red"
+        }
+      }
+    </script>
+  </body>
+</html>
