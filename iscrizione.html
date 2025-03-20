@@ -8,7 +8,7 @@
  <body>
 
  <fieldset style="width: 350px;">
-  <legend>Iscrizione al nostro sito(bisogna aver piu' di 18 anni)</legend>
+  <legend>Complimentz, you can now buy the new Jordan 1 Union 2025</legend>
   <label >Nome*: </label><br />
   <input id="nome" type="text" value="" > <br /><br />
   <label >Cognome*: </label><br />
@@ -21,33 +21,35 @@
   <button onclick=iscrizione()>Iscrizione</button>
  
   
-  <p id="testo" >Iscriviti</p>
+  <p id="testo" >iscriviti per ottenere GRATIS le scarpe Jordan 1 Union 2025</p>
+  <img type="image" src=/Users/alessandroghiselli/Desktop/Unknown.jpeg alt="Jordan 1 Union 2025" >
+
   </fieldset>
    <script>
+    
     var testo = document.getElementById("testo")
     var nome = document.getElementById("nome")
     var cognome = document.getElementById("cognome")
     var età = document.getElementById("età")
     var sesso = document.getElementsByName("sesso")
+    var immagine = document.getElementById("immagine")
   function iscrizione(){
-    if ( nome.value=="" || cognome.value=="" || età.value=="" ){
+    if ( nome.value=="" || cognome.value=="" || età.value=="" || isNaN(età.value)){
       testo.innerHTML="Non hai inserito tutti i dati necessari"
-      testo.style.backgroundColor ="yellow"
+      testo.style.backgroundColor = "yellow"
     }
-    else if (parseInt(età.value)<18 || isNan(parseInt(età.value))){
+    else if (parseInt(età.value)<18){
       testo.innerHTML="Non hai l'età necessaria"
       testo.style.backgroundColor ="red"
     }
     else if (sesso[0].checked){
-      testo.innerHTML="Benvenuto "+" "+nome.value+" "+cognome.value
+      testo.innerHTML="Complimenti per aver donato 1000 miliardi di eur a nominativo: Ghiselli Alessandro, le scarpe AIR ZOOM VICTORY 2 verranno spedite a breve"
       testo.style.backgroundColor ="green"
+
     }
     else if (sesso[1].checked){
-      testo.innerHTML="Benvenuta "+" "+nome.value+" "+cognome.value
-      testo.style.backgroundColor ="green"
-    }
-    else{
-        
+      testo.innerHTML="Peccato hai perso"
+      testo.style.backgroundColor ="red"
     }
   }
   </script>
